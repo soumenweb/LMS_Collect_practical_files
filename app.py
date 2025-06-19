@@ -8,6 +8,18 @@ from database import (
     get_all_uploads,
     UPLOAD_FOLDER
 )
+st.set_page_config(page_title="LMS Portal", layout="centered",page_icon="📚")
+
+# Hiding Streamlit UI elements
+hide_st_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    }
+    </style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Initialize database
 init_db()
